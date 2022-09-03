@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="calstyles.css">
+        <script>
+            function add(){
+                var a =parseInt(document.getElementById('tb1').value); 
+                var b = parseInt(document.getElementById('tb2').value);
+                var sum=a+b;
+                document.getElementById('tb3').value=sum;}
+
+                function sub(){
+                var a =parseInt(document.getElementById('tb1').value); 
+                var b = parseInt(document.getElementById('tb2').value);
+                var sub=a-b;
+                document.getElementById('tb3').value=sub;}
+
+                function div(){
+                var a =parseInt(document.getElementById('tb1').value); 
+                var b = parseInt(document.getElementById('tb2').value);
+                var division=a/b;
+                document.getElementById('tb3').value=division;}
+
+                function mul(){
+                var a =parseInt(document.getElementById('tb1').value); 
+                var b = parseInt(document.getElementById('tb2').value);
+                var multi=a*b;
+                document.getElementById('tb3').value=multi;}
+
+                function clearbt(){
+                    document.getElementById('tb1').value="";
+                    document.getElementById('tb2').value="";
+                    document.getElementById('tb3').value="";
+            
+                }
+        </script>
+        
+</head>
+
+<body>
+    <div id="whole">
+        <h1 align="center">Simple Calculator</h1>
+        <div id="t1">
+        <input type="number" id="tb1" placeholder="NUMBER e.g 1337">
+        <input type="number" id="tb2" placeholder="NUMBER e.g 2108">
+        </div>
+        <button type="button" class="button" onclick="add()">+Add</button>
+        <button type="button" class="button" onclick="sub()">-Subtract</button>
+        <button type="button" class="button" onclick="div()">/Divide</button>
+        <button type="button" class="button" onclick="mul()">*Multipy</button>
+        <div class="last">
+        <input type="text" id="tb3" placeholder="Result">
+        <button id="clear" type="button" onclick="clearbt();">Clear</button>
+        </div>
+    </div>
+    
+    
+</body>
+</html>
